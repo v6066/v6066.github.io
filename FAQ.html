@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+
+		<!--需要引入JQuery-->
+		<script type="text/javascript" src="./js/jquery-1.11.0.js"></script>
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script type="text/javascript" src="./js/bootstrap.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+<body>
+	<embed src="music/Wonderful Tonight.mp3" width="0" height="0">
+	<div class="row">
+        	<div class="col-md-10">
+        		
+        <div class="row">
+        	<div class="col-md-2">
+     	<ul class="nav nav-pills nav-stacked">
+     		<li class="active">
+     			<a href="index.html" target="_self">
+     				<span class="badge pull-right">4</span>Home
+     			</a>
+     		</li>
+     	</ul>
+     	</div>
+			</div>
+			
+			</div>
+			</div>
+	
+	<div class="row">
+		<div class="container">
+	<div class="jumbotron">
+		<h1><i><b>No question<br/>&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;no answer</b></i></h1>
+		<p>问题与解答</p>
+		<p style="color: firebrick"><small>点击下面的按钮提交你的想法</small></p>
+		<button class="btn btn-success" data-toggle="modal" data-target="#modalone" data-show="false">提交问题</button>
+<div class="modal fade" id="modalone">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">问题提交</h4>
+      </div>
+      <div class="modal-body">
+        <form action="布局.html" method="post" class="form-horizontal" role="form">
+			<div class="form-group">
+				<!--for用于聚焦-->
+				<label for="username" class="control-label col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题：</label><br />
+				<div class="col-sm-10">
+						<input type="username" class="form-control" placeholder="如:Redis的特性有哪些？" />
+					</div>
+				<label for="username" class="control-label col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注：</label>
+					<div class="col-sm-10">
+						<input type="username" class="form-control" placeholder="这是备注" />
+					</div>
+			</div>
+			</form>
+		<div class="row">
+			<div class="col-md-3 col-md-offset-4">
+        <button class="btn btn-info btn-success" id="submit_btn">提交</button>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+	$("#btn").click(function(){
+		$("#modalone").modal("show");
+	});
+	
+	$("#submit_btn").click(function(){
+		$("#modalone").modal("hide");
+	});
+</script>
+	</div>
+		</div>
+			</div>
+			
+	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：选项卡
+    -->
+    <ul class="nav nav-tabs">
+    	<li><a href="#web" data-toggle="tab">MySQL专区</a></li>
+    	<li><a href="#ai" data-toggle="tab">Git专区</a></li>
+    	<li><a href="#database" data-toggle="tab">C/C++专区</a></li>
+    	<li><a href="#os" data-toggle="tab">计算机网络专区</a></li>
+    	<li><a href="#algorithm" data-toggle="tab">算法专区</a></li>
+    	<li><a href="#UE4" data-toggle="tab">UE4专区</a></li>
+    	<li><a href="#PS" data-toggle="tab">PS专区</a></li>
+    	<li><a href="#qt" data-toggle="tab">Qt专区</a></li>
+    	<li><a href="#bootstrap" data-toggle="tab">BootStrap专区</a></li>
+    </ul>
+    
+    <!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：选项卡面板
+    -->
+    <div class="tab-content">
+    	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：MySQL专区
+    -->
+    	<div class="tab-pane active" id="web">
+    <span>November 28, 2021</span>
+		<h2><a href="#">【MySQL】MySQL知识总结<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">Flink自定义Sink将数据存到MySQL<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">MySQL_基本概念&DQL查询语言<sup><span class="badge bg-warning">New</span></sup></a></h2>
+
+    	</div>
+    	
+    	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：GIT专区
+    -->
+    	<div class="tab-pane" id="ai">
+    <span>November 28, 2021</span>
+		<h2><a href="#">Git下载、安装与环境配置<sup><span class="badge bg-warning">New</span></sup></a></h2>
+		<span>November 28, 2021</span>
+		<h2><a href="#">Linus与Git<sup><span class="badge bg-warning">New</span></sup></a></h2>
+		<span>November 28, 2021</span>
+		<h2><a href="blog.html">Git 扩展（Git Extensions） ——git 图形化客户端<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    	</div>
+    	
+    	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：C/C++专区
+    -->
+    	<div class="tab-pane" id="database">
+    <span>November 28, 2021</span>
+		<h2><a href="#">密码协议实验——SIGMMA协议<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">C语言的预处理<sup><span class="badge bg-warning">New</span></sup></a></h2>
+		
+	<span>November 28, 2021</span>
+		<h2><a href="#">从C到C++的转换<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">C语言算法与结构基础-二分查找<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    	</div>
+    	
+    	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：计算机网络专区
+    -->
+    <div class="tab-pane" id="os">
+    <span>November 28, 2021</span>
+	<h2><a href="#">Linux系统配置（服务控制）<sup><span class="badge bg-warning">New</span></sup></a></h2>
+	<p class=" text-warning" style="font-size: 20px;">假如坠落的时间足够长，你会以为自己是在飞，反之亦然</p>
+	<hr />
+						
+	<span>November 29, 2021</span>
+	<h2><a href="#">Linux打包压缩解压缩命令<sup><span class="badge bg-warning">New</span></sup></a></h2>
+	<p class=" text-warning" style="font-size: 20px;">你不要老想着过去，把自己做旧了</p>
+	<hr />
+						
+	<span>December 1, 2021</span>
+	<h2><a href="#">Linux 性能监控（CPU，内存，内存cache释放，I/O，网络）<sup><span class="badge bg-warning">New</span></sup></a></h2>
+	<p class=" text-warning" style="font-size: 20px;">星海相映，云梦泽深</p>
+	<hr />
+						
+	<span>December 1, 2021</span>
+	<h2><a href="#">TCP/IP协议概论<sup><span class="badge bg-warning">New</span></sup></a></h2>
+	<p class=" text-warning" style="font-size: 20px;">熟悉会滋长轻视</p>
+    </div>
+    
+    <div class="tab-pane" id="talk">
+	<span>December 1, 2021</span>
+	<h2><a href="#">Linux 设备——网络驱动<sup><span class="badge bg-warning">New</span></sup></a></h2>
+	<p class=" text-warning" style="font-size: 20px;">熟悉会滋长轻视</p>
+    </div>
+    
+    <!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：算法专区
+    -->
+    <div class="tab-pane" id="algorithm">
+    <span>November 28, 2021</span>
+		<h2><a href="#">红黑树<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">二叉树<sup><span class="badge bg-warning">New</span></sup></a></h2>
+		
+	<span>November 28, 2021</span>
+		<h2><a href="#">旅行商问题<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">动态规划<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    </div>
+    
+    <!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：UE4专区
+    -->
+    <div class="tab-pane" id="UE4">
+    <span>November 28, 2021</span>
+		<h2><a href="#">ue4卡通渲染<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">UE4联级粒子系统<sup><span class="badge bg-warning">New</span></sup></a></h2>
+		
+	<span>November 28, 2021</span>
+		<h2><a href="#">UE4流光材质制作<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">UE4物理系统浅析<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    </div>
+    
+    <!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：PS专区
+    -->
+    <div class="tab-pane" id="PS">
+    <span>November 28, 2021</span>
+		<h2><a href="#">PS钢笔<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">PS笔刷<sup><span class="badge bg-warning">New</span></sup></a></h2>
+		
+	<span>November 28, 2021</span>
+		<h2><a href="#">PS入门<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">PS插件推荐<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    </div>
+    
+    <!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：QT专区
+    -->
+    <div class="tab-pane" id="qt">
+    <span>November 28, 2021</span>
+		<h2><a href="#">Qt国内镜像<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">Vscode开发Qt<sup><span class="badge bg-warning">New</span></sup></a></h2>
+		
+	<span>November 28, 2021</span>
+		<h2><a href="#">Qt发展及应用<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">QT安装具体图解<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    </div>
+    
+    <!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：BootStrap专区
+    -->
+    <div class="tab-pane" id="bootstrap">
+    <span>November 28, 2021</span>
+		<h2><a href="#">bootstrap表单验证<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">移动端框架 - Bootstrap<sup><span class="badge bg-warning">New</span></sup></a></h2>
+		
+	<span>November 28, 2021</span>
+		<h2><a href="#">Bootstrap display属性<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    
+    <span>November 28, 2021</span>
+		<h2><a href="#">Bootstrap实现遮罩层<sup><span class="badge bg-warning">New</span></sup></a></h2>
+    </div>
+	
+</body>
+</html>

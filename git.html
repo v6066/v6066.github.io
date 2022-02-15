@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>如何快速上手Git</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="How to use git" />
+	<meta name="keywords" content="git,gitee,github" />
+	<meta name="author" content="levels" />
+
+	
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="css/nav.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<script src="js/respond.min.js"></script>
+
+	<script src="js/setcookie.min.js"></script>
+
+	<script src="js/comment.js"></script>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</head>
+	<body class="single">
+		<div class="row">
+        	<div class="col-md-2">
+     	<ul class="nav nav-pills nav-stacked">
+     		<li class="active">
+     			<a href="index.html" target="_self">
+     				<span class="badge pull-right">4</span>Home
+     			</a>
+     		</li>
+     	</ul>
+     			</div>
+			</div>
+		
+		<div class="row">
+			<div class="container">
+				<span>November 28, 2021</span>
+				<h2>如何快速上手Git</h2>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="container">
+		
+		<div class="row">
+			<div class="col-md-12"> 
+				<div>
+					<div style="font-size: 20px;">
+						<br/>
+						<br/>
+						<h2>Git 概述</h2>
+						<pre style="font-size: 20px;">Git（读音为/gɪt/）是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。<br/>也是Linus Torvalds为了帮助管理Linux内核开发而开发的一个开放源码的版本控制软件。
+Torvalds 开始着手开发 Git 是为了作为一种过渡方案来替代 BitKeeper。</pre><br />
+						<p style="font-size: 20px;">简而言之，Git就是你的项目的一个仓库，而且它是一个远程的仓库，这意味着只要你将你的项目通过Git托管到Github等平台上，可以极大程度的减少文件遗失或者损坏的风险</p>
+						<h2>一些必要的概念</h2>
+
+						<p class="text-info"><b>仓库（Repository）</b></p>
+						<p class="text text-primary">
+						仓库(Repository),简称Repo。通常用来管理和存放一个单独的项目,在本文中也称作"项目"。一个Repo中可以包含文件、文件夹、图片、视频、表单任何项目需要的文件。</p><br />
+						<p class="text-danger">一个Repo通常需要一个READMD文件,它通常为markdown格式的文本文档，用来说明项目相关的信息。</p><br />
+
+						<br /><br />
+						<p class="text-info"><b>区域划分</b></p>
+						<p class="text-left">在翻阅了相关资料和书籍之后，个人总结了一下，Git的整个托管流程中使用到了的区域有：<br/></p>
+						
+						<br /><br />
+						<p class="text-info"><b>本地</b></p>
+						<pre class="text-left" style="font-size: medium;">本地，顾名思义就是存在你移动硬盘里的文件在初始化前或初始化后的位置的区域</pre>
+
+						<br /><br />
+						<p class="text-info"><b>暂存区</b></p>
+						<pre class="text-left" style="font-size: medium;">暂存区是在你使用git add .以后使用的区域，此时Git会将你的文件从本地移至暂存区，方便后续的操作</pre>
+
+						<br /><br />
+						<p class="text-info"><b>工作区</b></p>
+						<pre class="text-left" style="font-size: medium;">暂存区是在你使用git commit -m""以后使用的区域,此时你的项目文件会被Git从暂存区贴上Tag移至工作区，相当于寄快递贴上快递单号</pre>
+						
+						<br /><br />
+						<p class="text-info"><b>远程仓库</b></p>
+						<pre class="text-left" style="font-size: medium;">此时通过git push(第一次提交的话是用的git remote add origin url，这个url是你的Github或者Gitee仓库的地址)<br />就能将你的项目从工作区移至远程仓库</pre>
+						</pre>
+						
+						<br /><br /><br /><br />
+						<p class="text-info"><b>分支 (branch) </b></p>
+						<p class="text text-danger" style="font-size: large;">分支可以让我们在项目Repo中处理多个不同的版本，默认情况下，项目会有一个默认分支main (有些项目的默认分支是master)。
+
+						我们通过创建分支来开发和修改项目，然后再将这些修改提交并入到main分支。<br /><br />
+
+						当你基于main分支创建一个新的分支时，可以理解为我们现在有了一个main分支的拷贝，或者叫snapshot，这份拷贝是基于main分支此时当前状态下的"复制"。要注意，当你在新的分支进行开发时，如果其他人对main分支进行了修改，你可能需要拉取(pull)这些更新的内容到你的分支里。<br /><br />
+
+						分支的一个重要作用是协同开发，在GitHub上，很多项目的开发人员都是通过创建新的分支，来修复bug，开发新的功能，或者开展新的尝试，当相关工作完成之后，这些修改将会合并（merge)到main分支上。</p>
+						
+						<!--
+                        	作者：1508265870@qq.com
+                        	时间：2022-01-19
+                        	描述：branch常用指令
+                        -->
+                        <h4 style="color: cornflowerblue;">(1) 查看当前有哪些分支</h4>
+                        <p>
+                        	<code>$&nbsp;&nbsp;git branch</code>
+                        </p><br />
+                        
+                        <h4 style="color: cornflowerblue;">(2) 新建一个分支</h4>
+                        <p>
+                        	<code>$&nbsp;&nbsp;git branch dev2</code>
+                        </p><br />
+                        
+                        <h4 style="color: cornflowerblue;">(3) 切换到指定分支</h4>
+                        <p>
+                        	<code>$&nbsp;&nbsp;git checkout dev2</code>
+                        </p><br />
+                        
+                        <h4 style="color: cornflowerblue;">(4) 查看本地和远程分支</h4>
+                        <p>
+                        	<code>$&nbsp;&nbsp;git branch -a</code>
+                        </p><br />
+                        
+                        <h4 style="color: cornflowerblue;">(5) 合并分支</h4>
+                        <p>
+                        		//切换到主分支后才能合并其余分支<br /><br />
+                        		<code>
+                        		$&nbsp;&nbsp;git checkout master</code> <br /><br />
+                        		//合并分支<br /><br />
+                        	<code>$&nbsp;&nbsp;git merge dev2</code>
+                        </p><br />
+                        
+                        <h4 style="color: cornflowerblue;">(6) 撤消上一次commit的内容</h4>
+                        <p>
+                        	//获取commit记录，包括commit id 和 commit的具体信息 <br /><br />
+                        	<code>
+                        	$&nbsp;&nbsp;git log
+                        	</code> <br /><br />  
+                        		//版本回退 <br /><br />
+                        		<code>
+                        		$&nbsp;&nbsp;git reset --hard <commit-id></code>
+                        </p>
+						
+						<br /><br /><br /><br />
+						<p class="text-info"><b>提交（commit）</b></p>
+						<p>对Github的项目进行修改，叫做commit。每一条commit都会附带一条commit信息，用来记录这条修改的简要描述，例如，"修复了某个bug" 或者 "增加了某个功能"。commit本身会记录对项目修改的所有内容。
+
+						使用Commit命令前，我们通常需要使用add命令，将修改或增加的项目文件"添加"到git中，让git能够跟踪到这些文件，例如我们在项目中修改了README.md文件，在commit之前：<br/>
+						
+						
+						
+						<h4 style="color: cornflowerblue;">(1) 提交到版本库</h4>
+                        <p>
+                        	<code>$&nbsp;&nbsp;git commit -m “message”</code>
+                        </p><br />
+                        
+                        <h4 style="color: cornflowerblue;">(2) git add&nbsp;+&nbsp;git commit</h4>
+                        <p>
+                        	<code>$&nbsp;&nbsp;git commit -a -m “message”</code>
+                        </p><br />
+                        
+                        <h4 style="color: cornflowerblue;">(3) 追加提交</h4>
+                        <p>
+                        	<code>$&nbsp;&nbsp;git commit --amend</code>
+                        </p><br />
+
+						<br /><br /><br /><br />
+						<p class="text-info"><b>拉取请求 (Pull Request，简称PR)</b> </p>
+						<p>拉取请求（Pull Request）又称作PR，是在github上进行合作开发的核心概念。当你提交一个PR，表示你提议将自己对项目的修改并入到别人项目中的某一分支里去。这个提议将由对方项目的相关人员进行审核，然后完成并入(merge)操作。当然，你也可以在自己项目中提交PR，并自己并入自己的分支。</p>
+
+						<br /><br /><br /><br />
+						<p class="text-info"><b>Fork</b></p>
+						<p>
+							Fork通常是指拷贝一个repo，这个repo可以作为你要修改、贡献该项目的起点，或者作为你自己项目的一个组件。
+
+							如果你在（别人的）项目中发现了一个bug，并且要修复它，那么你可以做：
+
+							Fork这个项目
+							修复bug
+							提交PR给项目
+							通常我们可以方便的在浏览器中使用Github的fork功能，当Fork完成之后，在我们自己的GitHub账户下，就多了一个forked repo。
+						</p>
+						
+						<br /><br /><br /><br />
+						<p class="text-info"><b>克隆&nbsp;(clone)&nbsp;&&nbsp;拉取&nbsp;(pull)</b></p>
+													
+							<code>git clone [URL] [SSH] [SVN]</code><br /><br />
+						<p>
+							通常情况下，我们在将项目从远程(github网站)拷贝到本地进行使用或者修改，可以使用clone功能。例如，我们想要将XXX项目拷贝到本地，可以在命令行中使用以下命令：
+							<br/>
+							eg:<br /><br />
+							<code>git clone https://github.com/XXXX.git</code>
+							<br/><br/>
+							当远程项目有更新时，我们不需要再次clone，只需要使用pull命令，可以将远程repo的更新内容拉取到本地项目中来:
+							<br/><br/>
+							<code>git pull</code>
+							<br/><br/>
+							如果是我们创建的远程repo，在本地进行修改(并commit)之后，我们可以使用push命令将这些更新，上传到远程repo中：
+
+							<code>git push</code>
+
+							注意： 如果我们clone的是别人的项目，通常只有pull权限，而不能push，如果想要修改别人的项目，可以使用<i><b>fork + clone + push + PR</b></i>的方式。
+						</p>
+						<br/>
+						<br/>
+						<br/>
+						<br />
+						<h2>基本操作</h2>
+						<p class="text-success"><b>1.项目托管</b></p>
+							<p>
+							<code>git init</code><br/><br/>
+							<code>git add .</code><br/><br/>
+							<code>git status</code><br/><br/>
+							<code>git commit -m"my first commit"</code><br/><br/>
+							<code>git push</code><br/><br/>
+							<p>这五步就能实现你的项目的快速托管</p>
+							<br/><br/>
+
+						<p class="text-success"><b>2.使用别人的项目</b></p>
+						<p>将项目git clone到本地<br/><br/>
+						   使用项目<br/><br/>
+						   如果远程Repo有更新，使用git pull拉取更新<br/><br/>
+						</p>
+						</p>
+						<br/><br/>
+
+						<p class="text-success"><b>3.项目功能的添加和修改</b></p>
+						<p class="lh-base">将远程Repo fork到自己的github中<br/><br/>
+						   将forked之后的项目拷贝git clone到本地<br/><br/>
+						   在本地完成修改或者开发，commit这些修改<br/><br/>
+					       	   将本地修改git push到远程forked repo中<br/><br/>
+						   给项目提交PR<br/><br/>
+						   项目相关人员会审核代码、给反馈或者提出修改，无误后并入项目Repo<br/><br/>
+						</p>
+						</p>
+						<br/><br/>
+						
+						<p class="text-success"><b>4.在线Git学习趣味教程</b></p>
+						<p class="lh-base">最近发现了个有意思的Git学习链接，是gitee上的一个教程，视频看得再多也不如动手去做一下要掌握得快<br/>
+							<br/>
+							传送门：<u><a href="https://oschina.gitee.io/learn-git-branching/">Learn Git Branching</a></u>
+						</p><br/><br/><br/><br/>
+
+						<p class="text-success"><b>5.Q&A</b></p>
+
+						<p><b>Q1:git push发现push失败？</b></p>
+						<p class="lh-base">A1：<br/>
+							<code>git pull --rebase origin master</code><br/><br />
+							<code>git push -u origin master</code>
+							<p class="lh-base">原理：先pull把远程仓库的commit取回本地进行更新，消除差异后再push到远程仓库上</p>
+						</p>
+
+						<p><b>Q2:push需要认证的解决方案</b></p>
+						<p class="lh-base">A2:&nbsp;对于没有配置SSH的机器上进行的托管是需要输入你的账号和密码进行认证的<br/>
+						对此最好的解决方法是配置SSH，只需一次配置就能实现除重装无密码push</p>
+						</p>
+
+						<p><b>Q3:git提交或克隆报错？</b></p>
+						<p>
+						<p class="lh-base">A3:&nbsp;因为git在拉取或者提交项目时，中间会有git的http和https代理，但是我们本地环境本身就有SSL协议了，所以取消git的https代理即可，不行再取消http的代理。<br/>解决的命令如下：</p>
+						<p>
+							<code>git config --global --unset http.proxy</code><br/><br/>
+							<code>git config --global --unset https.proxy</code>
+						</p>
+						</p>
+
+						<P><b>Q4:--all&nbsp;与&nbsp;.有什么不一样？</b></P>
+						<p class="lh-base">A4:&nbsp;我原来也一直没搞懂为什么两者一样，直到看到某些参考资料上所说的才彻底搞明白<br/>
+							如下表：
+							<center>
+							<table border="2" style="text-align: center;color: red;">
+								
+								<tr>
+								<th>使用参数</th>
+								<th>新增文件</th>
+								<th>改动文件</th>
+								<th>删除文件</th>
+								</tr>
+								<tr>
+								<td>--all</td>
+								<td>O</td>
+								<td>O</td>
+								<td>O</td>
+								</tr>
+								<tr>
+								<td>.</td>
+								<td>O</td>
+								<td>O</td>
+								<td>X</td>
+								</tr>
+								
+							</table>
+							</center>
+							<h5 style="text-align: center;">--all&nbsp;与&nbsp;.参数的区别</h5>
+							<br/>
+							<center>
+							<table border="2" style="text-align: center;color: red;">
+								
+								<tr>
+								<th>使用参数</th>
+								<th>新增文件</th>
+								<th>改动文件</th>
+								<th>删除文件</th>
+								</tr>
+								<tr>
+								<td>--all</td>
+								<td>O</td>
+								<td>O</td>
+								<td>O</td>
+								</tr>
+								<tr>
+								<td>.</td>
+								<td>O</td>
+								<td>O</td>
+								<td>O</td>
+								</tr>
+								
+							</table>
+							</center>
+							<h5 style="text-align: center;">--all&nbsp;与&nbsp;.参数的区别(Git&nbsp;2.X之后)</h5>
+							<br/>
+							因此，两者的差异会因为使用的Git版本和执行命令时的目录而有所差异
+						</p>
+
+						<p><b>Q5:什么时候可以commit?</b></p>
+						<p class="lh-base">A5:&nbsp;任何时候都可以，可以多个文件修改后commit，也可以只添加一张图片时commit<br/>
+						常见的commit时间点：<br/>
+						<ul>
+							<li>完成一个任务时</li>
+							<li>下班的时候</li>
+							<li>想要commit的时候</li>
+						</ul>
+						</p>
+						</p>
+						<p><b>Q6:我明明添加了一个新目录，为什么git add.后没有看到？</b></p>
+						<p class="lh-base">A6:&nbsp;Git对于没有文件的目录是不会追踪的<br/>
+							Git在计算和产生对象(Blob)的时候,是根据文件的内容进行计算的，
+							光新增一个目录Git是无法"感应"到其存在的
+
+						</p>
+						</p>
+
+						<p><b>Q6:Git也有资源回收机制吗？</b></p>
+						<p class="lh-base">A6:&nbsp;Git是有资源回收机制的，不过不同于JAVA或者C/C++,Git只会在如下情况才会触发资源回收：<br/>
+							<ul>
+								<li>.git/objects目录的对象或者文件过多的时候</li>
+								<li>执行git push命令将文件推送至远端服务器的时候</li>
+							</ul>
+							<br/>
+							<p>Git其实并不看重资源的开销，能够快速有效操作才是它的侧重点</p>
+						</p>
+						</p>
+
+						<p><b>Q7:合并分支真的合并的是"分支"？</b></p>
+						<p class="lh-base">A7:&nbsp;前面说过，Git能区分你的文件新旧的核心是--commit。因此，合并的是
+							分支指向的commit。<br/>
+							如果把分支当做贴纸，commit是贴纸上的内容，分支合并做的就是把某一贴纸上的
+							内容写到另一张上去
+						</p>
+						</p>
+
+						<p><b>Q8:Clone与Pull的区别？</b></p>
+						<p class="lh-base">A7:&nbsp;依据场景不同来使用。Clone一般是第一次下载项目的时候使用，pull/fetch则是后续的更新的时候使用
+						</p>
+						</p>
+
+						
+					</div>
+				</div>
+
+<h3>写下你的想法</h3>
+<input id="msg" type="text" size="40" value="">
+<input id="btn" type="button" value="留言">
+<div id="msg_c"></div>
+
+			</div>
+		</div>
+	</div>
+	
+	</div>
+</div>	
+	</body>
+</html>
+

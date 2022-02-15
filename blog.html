@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>如何搭建自己的个人博客</title>
+	<meta name="description" content="How to use git" />
+	<meta name="keywords" content="git,gitee,github" />
+	<meta name="author" content="levels" />
+
+
+
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="css/nav.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<script src="js/respond.min.js"></script>
+
+	<script src="js/setcookie.min.js"></script>
+
+	<script src="js/comment.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</head>
+	<body class="single">
+	<div id="page">
+		
+			<div class="overlay"></div>
+			
+			<div class="page-title">
+				
+				<span>November 29, 2021</span>
+				<h2>如何搭建自己的个人博客</h2>
+			</div>
+		</div>
+		<div id="fh5co-main-content">
+			<div class="fh5co-post"> 
+				<div class="fh5co-entry padding">
+					<div>
+
+						BGM：nop<br/><audio id="music1" loop="loop" controls="controls" autoplay="autoplay" preload id="music1">
+						<source src="music\nop.mp3" />
+						</audio><br/>
+						<br/>
+						<h2><b>前期准备</b></h2>
+						<ul>
+							<li>一个Github账号</li>
+							<li>Sublime编辑器</li>
+							<li>Git(Bash就行,GUI不直观)</li>
+						</ul>
+						<br/>
+						<br/>
+						<h2><b>优势&劣势</b></h2>
+						<ul>
+							<li>仅呈现静态页面内容，如果是用PHP或ASP编辑的无法响应</li>
+							<li>不支持.htaccess之类的配置文件，无法设置用户密码</li>
+							<li>仅支持Git上传，没有Windows Server中FTP之类的功能</li>
+							<li>所有内容在Github上是公开的，不论Github仓库是public还是private</li>
+							<li>免费</li>
+							<li>安全</li>
+							<li>稳定(这点存疑，不敢恭维，虽然现在这个Blog用的是Github托管的)</li>
+						</ul>
+
+						<h2><b>如何操作</b></h2>
+						<p>
+						<ol>
+							<li>在Github上创建一个全新的项目</li>
+							<img src="images\blog\new repo.png" alt="new repo"/>
+							<li>在<b>项目名称</b>和<b>Description</b>中输入"username.github.io"，选择public</li>
+							<img src="images\blog\create repo.png" alt="create repo"/>
+							<li>创建一个空的文件夹，向其中放入index.html文件，随便写点啥的</li>
+							<li>Git托管的五步(不清楚可以参考上篇博客-<a href="git.html">如何快速上手Git</a>)</li>
+							<img src="images\blog\push repo.png" alt="push repo"/>
+							<li>输入网址连接页面</li>
+							<img src="images\blog\web page.png" alt="web page"/>
+						</ol>	 
+						</p>
+
+						<h2><b>Q&A</b></h2>
+						<h3>Q1:为什么说好push只有五步会变成七步？</h3>
+						<p>A1:&nbsp;config那里是移除Github自带的代理，根因在于git拉取或者提交项目时会使用自带的代理，但是我们的本地环境中存在SSL协议，如果不移除，会出现如下的情况</p>
+						<img src="images\blog\push_error1.png" alt="push_error1"/>
+						<img src="images\blog\push_error2.png" alt="push_error2"/>
+						<br/>
+						<h3>Q2:为什么用<b>Bash</b>而不是<b>GUI</b>？</h3>
+						<p>A2:&nbsp;GUI虽然直观，但是GUI出问题时不如Bash解决起来直观，而且Vim的使用是在Bash下的。所以Git Bash用熟悉后再去看Linux下的Vim是一样的，节约学习成本(也不排除我是懒狗，不肯学习GUI的Git托管罢了)</p>
+						<br/>
+						<h3>Q3:为什么不用<u>阿里云+宝塔</u>这些进行博客的托管？</h3>
+						<p>A3:&nbsp;不是不行，但是网上看了许多资料和教程，大同小异，步骤繁琐不说，阿里云官方的教程我看起来都晕。我不讨厌字多的教程，但是它还是把我绕晕了。相比之下，Github的这个就简洁的多。还有个重要的原因是省钱。</p>
+						<br/>
+						<br/>
+						<br/>
+					</div>
+				</div>
+			<h3>写下你的想法</h3>
+				<input id="msg" type="text" size="40" value="">
+				<input id="btn" type="button" value="留言">
+				<div id="msg_c"></div>			
+				
+
+			</div>
+		</div>
+	</div>
+
+
+	<footer>
+		<div>
+					Written by <a href="" target="_blank">levels</a> 
+					</div>
+				</footer>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	
+
+	</body>
+</html>
+

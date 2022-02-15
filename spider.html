@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>网络爬虫基本思路</title>
+	<meta name="description" content="How to use git" />
+	<meta name="keywords" content="git,gitee,github" />
+	<meta name="author" content="levels" />
+
+
+
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="css/nav.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<script src="js/respond.min.js"></script>
+
+	<script src="js/setcookie.min.js"></script>
+
+	<script src="js/comment.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</head>
+	<body class="single">
+				<span>December 7, 2021</span>
+				<h2>网络爬虫基本思路</h2>
+			</div>
+		</div>
+		<div id="fh5co-main-content">
+			<div class="fh5co-post"> 
+				<div class="fh5co-entry padding">
+					<div>
+
+						BGM：nop<br/><audio id="music1" loop="loop" controls="controls" autoplay="autoplay" preload id="music1">
+						<source src="music\nop.mp3" />
+						</audio><br/>
+						<br/>
+						<h2><b>前期准备</b></h2>
+						<ul>
+							<li>python(版本3.6及以上)</li>
+							<li>idle编辑器(或者Pycharm)</li>
+							<li>pip21.3.1</li>
+						</ul>
+						<br/>
+						<br/>
+
+						<h2><b>爬取实现</b></h2>
+						<p>
+							<h4>1.库的导入</h4>
+								<code>
+									import re<br><br>
+									import requests<br><br>
+								</code>
+								<p>库的安装代码如下：</p>
+									打开CMD,输入如下命令：
+								<br><br>
+								<code>
+									pip install requess<br><br>
+									pip install re</code><br/><br/>
+								</code>
+
+							<br>
+							<h4>2.地址获取</h4>
+								<code>
+							    res=requests.get("https://www.ifeng.com/")
+								</code>
+								<b><br/>get中的url是你想要爬取的网页的url</b>
+							<br><br/>
+							<h4>3.内容筛选</h4>
+								<code>
+							    title=res.text<br><br>
+								content_title=findall('title="(.*?)"',title)<br><br>
+								</code>
+								<code>(.*?)</code>是一个简单的正则表达式<a href="RegEx.html" target="_blank"><u>(常用正则表达式)</u></a>
+							<br/>
+							<br/>
+							<h4>4.爬取结果显示</h4>
+								<code>
+									print(content_title)
+								</code>
+							<br/>
+							<br/>
+							<h4>5.全部源码</h4>
+								<code>
+								# coding: utf-8<br><br>
+								import re<br><br>
+								import requests<br><br>
+								res=requests.get("https://www.ifeng.com/")<br><br>
+								title=res.text<br><br>
+								content_title=findall('title="(.*?)"',title)<br><br>
+								print(content_title)<br><br>
+								</code>
+							<br>
+						</p>
+
+						
+					</div>
+				</div>
+			<h3>写下你的想法</h3>
+				<input id="msg" type="text" size="40" value="">
+				<input id="btn" type="button" value="留言">
+				<div id="msg_c"></div>			
+				
+
+			</div>
+		</div>
+	</div>
+<h3>相关推荐</h3>
+	<div class="fh5co-navigation">
+		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(images/project-4.jpg)">
+			<div class="overlay"></div>
+
+			<a class="copy" href="git.html">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Previous Post</span>
+							<h2>如何快速上手Git</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+
+		</div>
+		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(images/project-5.jpg)">
+			<div class="overlay"></div>
+			<a class="copy" href="word cloud.html">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Next Post</span>
+							<h2>python实现词云</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+
+		</div>
+	</div>
+
+	<footer>
+		<div>
+					Written by <a href="" target="_blank">levels</a> 
+					</div>
+				</footer>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	
+
+	</body>
+</html>
+

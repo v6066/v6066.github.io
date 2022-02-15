@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+
+		<!--需要引入JQuery-->
+		<script type="text/javascript" src="./js/jquery-1.11.0.js"></script>
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script type="text/javascript" src="./js/bootstrap.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+<body>
+	<embed src="music/Never An Absolution.mp3" width="0" height="0">
+	<div class="row">
+        	<div class="col-md-10">
+        		
+        <div class="row">
+        	<div class="col-md-2">
+     	<ul class="nav nav-pills nav-stacked">
+     		<li class="active">
+     			<a href="index.html">
+     				<span class="badge pull-right">42</span>Home
+     			</a>
+     		</li>
+     	</ul>
+     	</div>
+			</div>
+			
+			</div>
+			</div>
+	
+	<div class="row">
+		<div class="container">
+	<div class="jumbotron">
+		<h1><i><b>More communicate<br/>&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;more creative</b></i></h1>
+		<p><b><i>社区</i></b></p>
+		<button class="btn btn-success" data-toggle="modal" data-target="#modalone" data-show="false">了解更多</button>
+<div class="modal fade" id="modalone">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">什么是社区？</h4>
+      </div>
+      <div class="modal-body">
+        <form method="post" class="form-horizontal" role="form">
+			<div class="form-group">
+			当你拋出一个技术问题时，最终是否能得到有用的回答，往往取决于你所提问和追问的方式。<br /><br />
+			而社区则给你提供了一个提问和追问的平台。<br /><br />
+			</form>
+      
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+	$("#btn").click(function(){
+		$("#modalone").modal("show");
+	});
+	
+	$("#submit_btn").click(function(){
+		$("#modalone").modal("hide");
+	});
+</script>
+	</div>
+		</div>
+		</div>
+			<br /><br />
+	
+	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：选项卡
+    -->
+    <ul class="nav nav-tabs">
+    	<li><a href="#web" data-toggle="tab">前端</a></li>
+    	<li><a href="#ai" data-toggle="tab">人工智能</a></li>
+    	<li><a href="#database" data-toggle="tab">数据库</a></li>
+    	<li><a href="#os" data-toggle="tab">操作系统</a></li>
+    	<li><a href="#talk" data-toggle="tab">吹水阁</a></li>
+    </ul>
+    
+    <!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：选项卡面板
+    -->
+    <div class="tab-content">
+    	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：前端部分
+    -->
+    	<div class="tab-pane active" id="web">
+    <span>November 25, 2021</span>
+		<h2><a href="#">可视化工具-Plotly</a></h2>
+		<hr />
+    
+    <span>November 23, 2021</span>
+		<h2><a href="#">谈谈服务端渲染技术NuxtJS</a></h2>
+		<hr />
+    
+    <span>November 10, 2021</span>
+		<h2><a href="#">关于异步的详解</a></h2>
+		<hr />
+
+	<span>November 2, 2021</span>
+		<h2><a href="#">Vue脚手架环境搭建</a></h2>
+		<hr />
+    
+    <span>November 8, 2021</span>
+		<h2><a href="#">antd获取表单的所有数据</a></h2>
+		<hr />
+    
+    <span>November 18, 2021</span>
+		<h2><a href="#">vuex核心概念</a></h2>
+		<hr />
+
+	<span>November 6, 2021</span>
+		<h2><a href="#">笔记目录&思维导图-DOM & BOM</a></h2>
+		<hr />
+    
+    <span>November 10, 2021</span>
+		<h2><a href="#">ES6中有关对象的新增语法</a></h2>
+		<hr />
+    
+    <span>November 22, 2021</span>
+		<h2><a href="#">使用webview Android和js进行通信</a></h2>
+		<hr />
+
+    	</div>
+    	
+    	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：人工智能部分
+    -->
+    	<div class="tab-pane" id="ai">
+    	<span>November 28, 2021</span>
+		<h2><a href="#">NAM：基于标准化的注意力模块</a></h2>
+		<hr />
+		
+		<span>November 3, 2021</span>
+		<h2><a href="#">从零实现深度学习框架——实现Tensor的反向传播</a></h2>
+    	<hr />
+    	
+    	<span>November 2, 2021</span>
+		<h2><a href="#">简单易懂容易理解的随机森林，逻辑回归</a></h2>
+		<hr />
+		
+		<span>November 8, 2021</span>
+		<h2><a href="#">【Python+OpenCV—matplotlib绘制灰度/彩色直方图 Hist】</a></h2>
+    	<hr />
+    	
+    	<span>November 18, 2021</span>
+		<h2><a href="#">matlab 英文字符神经网络训练</a></h2>
+		<hr />
+		
+		<span>November 16, 2021</span>
+		<h2><a href="#">TensorFlow 对数据集标记的xml文件解析记录</a></h2>
+    	<hr />
+    	
+    	<span>November 21, 2021</span>
+		<h2><a href="#">图像语义分割方法研究进展</a></h2>
+		<hr />
+		
+		<span>November 19, 2021</span>
+		<h2><a href="#">【OpenCV-Python】18.OpenCV的图像轮廓——霍夫变换</a></h2>
+    	<hr />
+    	
+    	</div>
+    	
+    	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：数据库部分
+    -->
+    	<div class="tab-pane" id="database">
+    	<span>November 2, 2021</span>
+		<h2><a href="#">Redis缓存学习</a></h2>
+		<hr />
+		
+		<span>November 8, 2021</span>
+		<h2><a href="#">MySQL主从复制和读写分离</a></h2>
+    	<hr />
+    	
+    	<span>November 18, 2021</span>
+		<h2><a href="#">图解MySQL悲观锁</a></h2>
+		<hr />
+		
+		<span>November 16, 2021</span>
+		<h2><a href="#">mysql8.0.25安装配置教程(windows 64位)</a></h2>
+    	<hr />
+    	
+    	<span>November 21, 2021</span>
+		<h2><a href="#">ubuntu安装mysql并远程连接</a></h2>
+		<hr />
+		
+		<span>November 19, 2021</span>
+		<h2><a href="#">redis持久化与淘汰策略</a></h2>
+    	<hr />
+    	</div>
+    	
+    	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-22
+    	描述：操作系统部分
+    -->
+    <div class="tab-pane" id="os">
+    <span>November 2, 2021</span>
+		<h2><a href="#">Linux操作系统基础</a></h2>
+		<hr />
+		
+		<span>November 8, 2021</span>
+		<h2><a href="#">操作系统原理</a></h2>
+    	<hr />
+    	
+    	<span>November 18, 2021</span>
+		<h2><a href="#">操作系统与操作系统内核</a></h2>
+		<hr />
+		
+		<span>November 16, 2021</span>
+		<h2><a href="#">深入理解Linux</a></h2>
+    	<hr />
+    </div>
+    
+    <!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-23
+    	描述：吹水阁部分
+    -->
+    <div class="tab-pane" id="talk">
+	<span>December 23, 2021</span>
+		<h2><a href="authorthink.html" target="_self">作者的一些想法</a></h2>
+		<hr />
+	
+		<span>November 2, 2021</span>
+		<h2><a href="#">超美的圣诞小程序，装饰你的桌面</a></h2>
+		<hr />
+		
+		<span>November 8, 2021</span>
+		<h2><a href="#">程序界的"茅盾"文学奖</a></h2>
+    	<hr />
+    	
+    	<span>November 18, 2021</span>
+		<h2><a href="#">百度推出10GB网盘青春版</a></h2>
+		<hr />
+		
+		<span>November 16, 2021</span>
+		<h2><a href="#">windows11 休闲壁纸</a></h2>
+    	<hr />
+    	
+    	<span>November 21, 2021</span>
+		<h2><a href="#">安利一款 VSCode 的酷炫小神器</a></h2>
+		<hr />
+		
+		<span>November 19, 2021</span>
+		<h2><a href="#">#程序员，在麻瓜的世界里挣扎#－槽边往事</a></h2>
+    	<hr />
+    </div>
+
+
+    
+    
+    <br /><br /><br /><br />
+    <!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-25
+    	描述：放在后面是因为放在前面会出现
+    	Uncaught TypeError: Cannot read property 'offsetWidth' of null
+    	简单来说，就是无法加载，是因为网页未能渲染完就加载了snow.js，导致的问题
+    -->
+    <script src="js/snow.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>img{ width: 60px; height: 60px; position: absolute; }</style>
+		
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+
+		<!--需要引入JQuery-->
+		<script type="text/javascript" src="./js/jquery-1.11.0.js"></script>
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script type="text/javascript" src="./js/bootstrap.js"></script>
+		
+		<script src="js/move.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		
+		<img src="./img/1494729358.gif" alt="">
+		
+		<div class="row">
+        	<div class="col-md-2">
+     	<ul class="nav nav-pills nav-stacked">
+     		<li class="active">
+     			<a href="index.html" target="_self">
+     				<span class="badge pull-right">4</span>Home
+     			</a>
+     		</li>
+     	</ul>
+     			</div>
+			</div>
+		
+		<div class="row">
+		<div class="container">
+	<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img src="./img/7.jpg" alt="...">
+							<div class="carousel-caption">
+								<h3>作者的话</h3>
+								<p>来自levels的一些"废话"</p>
+							</div>
+					</div>
+				</div>
+			</div>
+	
+	<div class="row">
+		<div class="container">
+			<div>
+				<p class="text-muted">
+					<br />
+					<br />
+					<h4 style="font-size: 25px;" class="glyphicon glyphicon-hdd"><b>镜像列表</b></h4>
+					<div class="row">
+						<div class="col-md-6">Name</div>
+						<div class="col-md-6">Lst Update</div>
+					</div>
+					<hr />
+					
+					<div class="row">
+						<div class="col-md-6">
+							<ul class="list-group">
+								<li class="list-group-item list-group-item-dark"><a href="#">AOSP</a></li>
+								<li class="list-group-item list-group-item-light"><a href="#">AUR</a></li>
+								<li class="list-group-item list-group-item-dark"><a href="#">AdoptOpenJDK</a></li>
+								<li class="list-group-item list-group-item-light"><a href="#">CPAN</a></li>
+								<li class="list-group-item list-group-item-dark"><a href="#">CRAN</a></li>
+								<li class="list-group-item list-group-item-light"><a href="#">CTAN</a></li>
+								<li class="list-group-item list-group-item-dark"><a href="#">CocoaPods</a></li>
+								<li class="list-group-item list-group-item-light"><a href="#">FreeCAD</a></li>
+								<li class="list-group-item list-group-item-dark"><a href="#">ELK</a></li>
+								<li class="list-group-item list-group-item-light"><a href="#">KaOS</a></li>
+								<li class="list-group-item list-group-item-light"><a href="#">......</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<ul class="list-group">
+								<li class="list-group-item list-group-item-dark">2021-12-23 23:17</li>
+								<li class="list-group-item list-group-item-light">0000-00-00 00:00</li>
+								<li class="list-group-item list-group-item-dark">2021-12-20 19:55</li>
+								<li class="list-group-item list-group-item-light">2021-12-24 05:39</li>
+								<li class="list-group-item list-group-item-dark">2021-12-24 05:06</li>
+								<li class="list-group-item list-group-item-light">2021-12-24 05:57</li>
+								<li class="list-group-item list-group-item-dark">2021-12-24 03:47</li>
+								<li class="list-group-item list-group-item-light">2021-12-23 14:11</li>
+								<li class="list-group-item list-group-item-dark">2021-12-24 09:23</li>
+								<li class="list-group-item list-group-item-light">2021-12-24 07:32</li>
+								<li class="list-group-item list-group-item-light"><a href="#">......</a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--
+    	作者：1508265870@qq.com
+    	时间：2021-12-25
+    	描述：放在后面是因为放在前面会出现
+    	Uncaught TypeError: Cannot read property 'offsetWidth' of null
+    	简单来说，就是无法加载，是因为网页未能渲染完就加载了snow.js，导致的问题
+    -->
+		<script src="js/snow.js"></script>
+		<embed src="music/Blossoms.mp3" width="0" height="0" >
+	</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>python实现词云</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+	
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="css/nav.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<script src="js/respond.min.js"></script>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+	</head>
+		<body class="single">
+		
+			<ul id="nav">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="particle.html">上一篇</a></li>
+			<li><a href="linux command.html">下一篇</a></li>
+			</ul>
+
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		<div id="fh5co-aside" style="background-image: url(images/image_2.jpg)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<nav role="navigation">
+				<ul>
+					<li><a href="index.html"><i class="icon-home"></i></a></li>
+				</ul>
+			</nav>
+			<div class="page-title">
+				<img src="images/person_1.jpg" alt="Free HTML5 by FreeHTMl5.co">
+				<span>November 30, 2021</span>
+				<h2>python实现词云</h2>
+			</div>
+		</div>
+		<div id="fh5co-main-content">
+			<div class="fh5co-post"> 
+				<div class="fh5co-entry padding">
+					<div>
+
+						BGM：Adagio for Summer Wind<br/><audio id="music1" loop="loop" controls="controls" autoplay="autoplay" preload id="music1">
+						<source src="music\Adagio for Summer Wind.mp3" />
+						</audio><br/>
+						<br/>
+						<h2><b>前期准备</b></h2>
+						<ul>
+							<li>python(版本3.6及以上)</li>
+							<li>idle编辑器(或者Pycharm)</li>
+							<li>pip21.3.1(<a href="https://www.jianshu.com/p/6b16d426f6fc">pip21.3.1安装教程</a>)</li>
+						</ul>
+						<br/>
+						<br/>
+						<h2><b>词云概述</b></h2>
+						<P>词云，也称为<b>文字云或标签云</b>，它主要是通过<b>文字占的面积大小、颜色的深浅变化</b>来呈现关键词出现的次数。文字占的面积越大，代表该词出现的次数最多，相反，<b>文字占的面积越小，出现的次数就越少</b> 。
+
+						在对很多文本类型数据进行分析、呈现和表达时，我们都会用到词云，比如<b>评论留言数据、弹幕数据、标签数据、调查数据、搜索数据</b>等等。
+							<img src="./images/wordcloud.jpg" alt="wordcloud">
+						</P>
+
+						<h2><b>词云实现</b></h2>
+						<p>
+							<h4>1.库的导入</h4>
+								<code>
+									import jieba<br><br>
+									from wordcloud import WordCloud<br><br>
+									from imageio impoart imread<br><br>
+									import matplotlib.pylot as plt<br><br>
+								</code>
+								<br><br>
+								<p>库的安装代码如下：</p>
+									打开CMD,输入如下命令：
+								<br><br>
+								<code>
+									pip install jieba<br><br>
+									pip install WordCloud<br><br>
+									pip install imageio<br><br>
+									pip install matplotlib<br><br>
+								</code>
+
+							<br>
+							<h4>2.文本处理</h4>
+								<code>
+									
+									# 读取文本文件<br><br>
+									path = "D:/Study/code/wc/word.txt" # 存储文本路径位置<br><br>
+									text = open(path, 'r', encoding="utf-8").read()<br><br>
+									# 使用jieba库对文本进行分词<br><br>
+									cut_text = ''.join(jieba.cut(text))<br><br>
+								</code>
+							<br>
+							<h4>3.图片处理</h4>
+								<code>
+									# 读取图片<br><br>
+									color_mask = imread('D:/Study/code/wc/Apple.jpg')<br><br>
+									# 生成词云<br><br>
+									cloud = WordCloud(<br><br>font_path='D:\study\code\wc\HanYiYanKaiW-2.ttf',#字体文件路径<br><br>
+							         background_color="white",#这里将白色设定为背景色，即非白色区域将填充词<br><br>
+							         mask=color_mask,<br><br>
+							         max_words=1000,#最大词语数<br><br>
+							         max_font_size=60)#最大词的大小<br><br>
+									 word_cloud = cloud.generate(cut_text)<br><br>
+								</code>
+							<br>
+							<h4>4.词云显示</h4>
+								<code>
+									# 输出图片<br><br>
+									plt.axis('off')<br><br>
+									plt.imshow(word_cloud)<br><br>
+									plt.show()<br><br>
+								</code>
+
+							<br>
+							<h4>5.全部源码</h4>
+								<code>
+								# coding: utf-8<br><br>
+								import jieba<br><br>
+								from wordcloud import WordCloud<br><br>
+								from imageio import imread # 处理图像的函数<br><br>
+								import matplotlib.pyplot as plt<br><br>
+
+								# 读取文本文件<br><br>
+								path = "D:/Study/code/wc/word.txt" # 存储文本路径位置<br><br>
+								text = open(path, 'r', encoding="utf-8").read()<br><br>
+								# 使用jieba库对文本进行分词<br><br>
+								cut_text = ''.join(jieba.cut(text))<br><br>
+								# 读取图片<br><br>
+								color_mask = imread('D:/Study/code/wc/Apple.jpg') #路径可替换<br><br>
+								# 生成词云<br><br>
+								cloud = WordCloud(<br><br>font_path='D:\study\code\wc\HanYiYanKaiW-2.ttf',#字体文件路径<br><br>
+								background_color="white",#这里将白色设定为背景色，即非白色区域将填充词<br><br>
+								mask=color_mask,<br><br>
+								max_words=1000,#最大词语数<br><br>
+								max_font_size=60)#最大词的大小<br><br>
+								word_cloud = cloud.generate(cut_text)<br><br>
+
+								# 输出图片<br><br>
+								plt.axis('off')<br><br>
+								plt.imshow(word_cloud)<br><br>
+								plt.show()<br><br>
+								</code>
+							<br>
+						</p>
+
+						<h4><b>Q&A</b></h4>
+						<p><b>Q1:编译的时候发生resources can't open该如何处理？</b></p>
+						<p>A1：<br/>先检查图片后缀是不是一致的，再检查图片和文本的路径等是否有误。如果以上都没问题，那就是字体的问题了。</p>
+						</p>
+
+						<p><b>Q2:请问用什么编译器比较好？</b></p>
+						<p>A2:&nbsp;看个人喜好，新手推荐pycharm,习惯了dos的可以直接使用python自带的idle</p>
+						</p>
+
+						<p><b>Q2:字体出现问题怎么办？</b></p>
+						<p>A2:&nbsp;先检查有没有字体文件，再检查字体文件的引用路径是否正确，还是不行就试着重新下载进行替换</p>
+						</p>
+					</div>
+				</div>
+
+				
+				
+
+			</div>
+		</div>
+	</div>
+<h3>相关推荐</h3>
+	<div class="fh5co-navigation">
+		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(images/project-4.jpg)">
+			<div class="overlay"></div>
+
+			<a class="copy" href="blog.html">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Previous Post</span>
+							<h2>如何搭建自己的个人博客</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+
+		</div>
+		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(images/project-5.jpg)">
+			<div class="overlay"></div>
+			<a class="copy" href="linux command.html">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Next Post</span>
+							<h2>Linux常用命令</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+
+		</div>
+	</div>
+
+		<footer>
+			<div>
+					Written by <a href="" target="_blank">levels</a> 
+			</div>
+		</footer>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	</body>
+</html>
+
